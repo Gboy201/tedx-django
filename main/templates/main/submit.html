@@ -1,0 +1,48 @@
+{% extends 'main/index.html' %} {% block content %}
+<style>
+  body {
+    background-color: black;
+  }
+  .cover {
+    padding: 300px;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-color: black;
+  }
+  h1 {
+    margin-top: 15%;
+    font-size: 60px;
+    color: white;
+  }
+  h2 {
+    margin-bottom: 15%;
+    font-size: 40px;
+    color: white;
+  }
+  button {
+    width: 40%;
+    padding: 10px;
+    border: 3px solid white;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: "Montserrat";
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+</style>
+<div class="container cover">
+  <h1>Thanks for submitting!</h1>
+  <br />
+  <h2>Your support is greatly appreciated!</h2>
+  <br />
+  <a href="{% url 'home' %}"><button>Return To Homepage</button></a>
+</div>
+{% endblock content %}

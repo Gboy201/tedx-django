@@ -1,0 +1,307 @@
+{% extends 'main/index.html' %} {% block content %} {% load static %}
+<style>
+  .cover {
+    padding: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .cover-text {
+    font-family: Helvetica;
+    color: white;
+  }
+  h1 {
+    font-weight: 1000;
+    font-size: 100px;
+    text-align: center;
+    font-family: Helvetica;
+  }
+  .rest-of-title {
+    font-size: 90px;
+    font-weight: 300;
+  }
+  h3 {
+    font-weight: 1000;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  .button {
+    padding: 15px;
+    background-color: black;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    border: 0.12rem solid white;
+    text-decoration: none;
+  }
+  .button:hover {
+    border: 0.12rem solid red;
+  }
+  .rowcontain {
+    background-color: black;
+    padding: 10%;
+  }
+  .col-12 {
+    text-align: center;
+    color: white;
+  }
+  h2 {
+    font-size: 55px;
+    text-align: left;
+    font-weight: bolder;
+  }
+
+  .stockimg {
+    height: 70%;
+    width: 90%;
+    border: 0.12em solid white;
+    display: block;
+    justify-content: left;
+  }
+
+  p {
+    text-align: left;
+  }
+  .gradient {
+    height: 50px;
+    width: 100%;
+    color: white;
+  }
+  .subheading {
+    text-align: center;
+    color: white;
+  }
+  .info-box {
+    padding: 20px;
+    font-family: "Montserrat";
+    border: 3px white solid;
+    color: white;
+  }
+  .ticket {
+    color: #eb0028;
+    text-decoration: none;
+  }
+  .sponsorrow {
+    padding: 10%;
+    background-color: black;
+  }
+  .sponsorTitle {
+    text-align: center;
+    color: white;
+    margin-bottom: 5%;
+  }
+  .gold {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .platinum {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .bronze {
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .silver {
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 60px; /* Font size after the specified viewport width */
+    }
+    .rest-of-title {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 35px;
+    }
+    .cover {
+      padding: 100px;
+      padding-top: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .gold {
+      width: 300px;
+      height: 200px;
+    }
+    .platinum {
+      width: 300px;
+      height: 200px;
+    }
+    .bronze {
+      width: 200px;
+      height: 200px;
+    }
+    .silver {
+      width: 200px;
+      height: 200px;
+    }
+  }
+</style>
+<div
+  class="cover"
+  style="background-image: url('{% static 'main/cover.jpeg' %}')"
+>
+  <div class="container-xl cover-text">
+    <h1 class="text-sm-sm">
+      <span class="tedx">TED<span style="vertical-align: super">x</span></span>
+      <span class="rest-of-title">Kiwanis Park <b>Youth</b></span>
+    </h1>
+    <h3>Empower. Inspire. Challenge.</h3>
+
+    <a href="{% url 'sponsor' %}" style="text-decoration: none"
+      ><div class="button">
+        <span>Sponsor Us</span>
+      </div></a
+    >
+  </div>
+</div>
+
+<section>
+  <div class="container-fluid rowcontain">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 p-3 col-12">
+        <img class="stockimg" src="{% static 'main/kiwanis.png' %}" />
+      </div>
+
+      <div class="col-lg-6 col-sm-12 p-3 col-12">
+        <h2>
+          About
+          <span style="color: #eb0028" class="tedx">TED<sup>x</sup></span>
+          Kiwanis Park Youth
+        </h2>
+        <br />
+        <p>
+          At TED<sup>x</sup> Kiwanis Park Youth, we understand that curiosity
+          isn't just a trait, it's the fuel that drives us towards
+          groundbreaking discoveries. Our event will showcase a diverse array of
+          speakers from various disciplines—each chosen for their ability to
+          inspire, challenge, and provoke thought among our attendees. Through
+          their stories, insights, and experiences, we aim to illuminate the
+          ways in which curiosity can lead as a powerful force for change.
+        </p>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div
+        class="col-lg-6 col-sm-12 ps-3 pt-3 pb-3 col-12"
+        style="padding-bottom: 125px; padding-right: 5%"
+      >
+        <h2>
+          What is
+          <span style="color: #eb0028" class="tedx">TED<sup>x</sup></span>
+        </h2>
+        <br />
+        <p>
+          TED<sup>x</sup> events are independently organized, community-based
+          gatherings designed to share a TED-like experience. They are run by
+          local volunteers who obtain a license from TED, allowing them to
+          create events that feature TED Talk videos and live speakers to spark
+          discussion and connection. These events adhere to the guidelines and
+          spirit of TED's mission of "ideas worth spreading" but are tailored to
+          the local community's interests and needs. Unlike TED Conferences,
+          which are organized directly by TED, TEDx events are self-organized,
+          promoting local engagement and idea-sharing on a global scale​
+        </p>
+      </div>
+
+      <div class="col-lg-6 col-sm-12 p-3 pb-0 col-12">
+        <img class="stockimg" src="{% static 'main/tedx.png' %}" />
+      </div>
+    </div>
+  </div>
+</section>
+<section id="eventinfo">
+  <div class="container-fluid rowcontain pt-3">
+    <h2 class="subheading mb-5">Event Info</h2>
+    <div class="row p-3">
+      <div class="col-lg-6 col-sm-12 p-3">
+        <div class="info-box">
+          <h4>Event Date And Time: <br /></h4>
+          <p>November 23rd, 2024, 10:00 AM - 4:00 PM</p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 p-3">
+        <div class="info-box">
+          <h4>Location: <br /></h4>
+          <p>To be determined.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row p-3 pt-0">
+      <div class="col-lg-6 col-sm-12 p-3">
+        <div class="info-box">
+          <h4>Registration And Ticketing: <br /></h4>
+          <p>
+            Tickets can be purchased
+            <a
+              class="ticket"
+              href="https://checkout.eventcreate.com/tedxkiwanisparkyouth/select-buy"
+              >here.</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 p-3">
+        <div class="info-box">
+          <h4>Any Questions? <br /></h4>
+          <p>
+            Use the <a class="ticket" href="#">email</a> provided to ask any
+            questions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sponsors">
+  <div class="row sponsorrow pt-3">
+    <h2 class="sponsorTitle">Our Sponsors</h2>
+    {% for x in platinum %}
+    <div class="col-xl-6 col-md-12 col-sm-12 p-5">
+      <img class="platinum" src="/{{x.image}}" />
+    </div>
+    {% endfor %} {% for x in gold %}
+    <div class="col-xl-6 col-md-12 col-sm-12 p-5">
+      <img class="gold" src="/{{x.image}}" />
+    </div>
+    {% endfor %} {% for x in silver%}
+    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 p-5">
+      <img class="silver" src="/{{x.image}}" />
+    </div>
+    {% endfor %} {% for x in bronze%}
+    <div class="col-xl-4 col-lg-6 col-md-6 col-12 p-5">
+      <img class="bronze" src="/{{x.image}}" />
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}

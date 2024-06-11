@@ -1,0 +1,63 @@
+{% extends "main/index.html" %} {% block content %} {%load static%}
+<style>
+  .rowcontain {
+    padding: 10%;
+  }
+  body {
+    background-color: black;
+  }
+  h2 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    font-family: "Montserrat";
+  }
+  p {
+    color: white;
+    font-family: "Montserrat";
+    text-align: center;
+    margin-bottom: 4%;
+  }
+  h5 {
+    text-align: center;
+    color: white;
+    font-family: "Montserrat";
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  img {
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 500px) {
+    h2 {
+      margin-top: 20%;
+    }
+  }
+</style>
+
+<div class="container-fluid pb-0 rowcontain">
+  <h2>Our Team</h2>
+  <br /><br />
+  <p>
+    Here's our generous team that made this event possible. Thanks for your
+    passion, determination, and hard work for making
+    <span style="font-weight: bold; color: #eb0028">Ted<sup>x</sup></span>
+    Kiwanis Park Youth happen.
+  </p>
+
+  <div class="row">
+    {% for member in teamMembers%}
+    <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+      <a href="{{member.linkedin}}"><img src="/{{member.pfp}}" /></a>
+      <h5>{{member.full_name}}</h5>
+      <h5 style="color: grey; font-size: 20px">{{member.position}}</h5>
+    </div>
+    {% endfor %}
+  </div>
+  {% endblock content %}
+</div>

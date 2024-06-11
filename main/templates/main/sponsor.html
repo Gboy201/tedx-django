@@ -1,0 +1,364 @@
+{% extends 'main/index.html' %} {% block content %} {% load static %}
+
+<style>
+  .cover {
+    padding: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  h1 {
+    font-weight: 1000;
+    font-size: 60px;
+    text-align: center;
+    font-family: Helvetica;
+    color: white;
+  }
+  p {
+    font-family: Montserrat;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+  }
+  .strip {
+    background-color: black;
+    width: 100%;
+    padding: 10%;
+  }
+  .sub {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 18;
+    color: white;
+    text-align: center;
+  }
+  img {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hey {
+    padding: 200px;
+  }
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: Montserrat;
+  }
+  td {
+    padding: 15px;
+    vertical-align: top;
+  }
+  th {
+    padding: 15px;
+    font-size: 20px;
+  }
+  .tier {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .tier-box {
+    border-bottom: 3px white solid;
+    padding-bottom: 7px;
+  }
+  h2 {
+    color: white;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 40px;
+    margin-bottom: 7%;
+  }
+  .form-container {
+    background-color: black;
+    padding: 40px;
+    width: 100%;
+  }
+
+  .form-container h2 {
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 50%;
+    padding: 10px;
+    border: 0;
+    border-bottom: 2px white solid;
+    font-family: "Montserrat";
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+  }
+
+  .form-group textarea {
+    height: 100px;
+    resize: none;
+    border: 2px white solid;
+    padding-left: 10px;
+  }
+
+  .form-group button {
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: "Montserrat";
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .form-group button:hover {
+    border: 3px black solid;
+  }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 50px; /* Font size after the specified viewport width */
+    }
+    .cover {
+      padding: 100px;
+      padding-top: 200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 75%
+
+  }
+</style>
+<div
+  class="cover"
+  style="background-image: url('{% static 'main/sponsorgradient.jpeg' %}')"
+>
+  <h1>Support Our Journey</h1>
+  <br />
+  <p>
+    We're excited to invite you to join us in making Ted<sup>x</sup> Kiwanis
+    Park Youth a huge success! As we gear up for this Ted<sup>x</sup>
+    conference, we're reaching out to potential sponsors who share our passion.
+    By becoming a sponsor, you'll not only gain exposure to our diverse audience
+    but also demonstrate your commitment to supporting local events. Your
+    contribution will directly impact the success of our event, ensuring
+    memorable experiences for all attendees.
+  </p>
+</div>
+<div class="container-fluid strip">
+  <h2 style="color: white; text-align: left">Sponsorship Tiers</h2>
+  <table>
+    <tr>
+      <th class="tier"><div class="tier-box">Tier</div></th>
+      <th>Benefits</th>
+    </tr>
+    <tr>
+      <td class="tier">
+        <div class="tier-box" style="color: #ff5733">
+          Bronze <br />
+          ($500)
+        </div>
+      </td>
+      <td>
+        <ul>
+          <li>
+            Will be featured on our slideshow at the event for in loop for 3
+            seconds per time it is displayed
+          </li>
+          <li>
+            Will have a respective post made on instagram, linkedin and facebook
+          </li>
+          <li>
+            Verbal Recognition at the beginning of the event as well as their
+            logo in our digital event program.
+          </li>
+          <li>2 complimentary VIP seats</li>
+          <li>Will be featured first on our partners page on our website</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="tier">
+        <div class="tier-box" style="color: #c0c0c0">
+          Silver <br />
+          ($1000)
+        </div>
+      </td>
+      <td>
+        <ul>
+          <li>
+            Will be featured on our slideshow at the event for in loop for 4
+            seconds per time logo is displayed
+          </li>
+          <li>
+            Will have a respective post made on instagram, linkedin and facebook
+          </li>
+          <li>
+            Verbal Recognition at the beginning of the event as well as their
+            logo in our digital event program that is larger and placed higher
+            on the page.
+          </li>
+          <li>3 complimentary VIP seats</li>
+          <li>Will be featured first on our partners page on our website</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="tier">
+        <div class="tier-box" style="color: #ffd700">
+          Gold <br />
+          ($1500)
+        </div>
+      </td>
+      <td>
+        <ul>
+          <li>
+            Will be featured on our slideshow at the event for in loop for 5
+            seconds per time logo is displayed
+          </li>
+          <li>
+            Will have a respective post made on instagram, linkedin and facebook
+          </li>
+          <li>
+            Special Thanks at the beginning of the event as well as a Verbal
+            Recognition at the end of the event as well as their logo featured
+            again and featured in our digital event program that is larger than
+            our bronze and silver partners and that is placed higher on the
+            page.
+          </li>
+          <li>4 complimentary VIP seats</li>
+          <li>
+            Certificate of Appreciation: A certificate recognizing their support
+            for TEDx Kiwanis Park Youth.
+          </li>
+          <li>
+            Will be featured on our partners page on our website with a large
+            banner
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="tier">
+        <div class="tier-box" style="color: #e5e4e2">
+          Platinum <br />
+          ($2000)
+        </div>
+      </td>
+      <td>
+        <ul>
+          <li>
+            Will be featured on our slideshow at the event for in loop for 7
+            seconds per time logo is displayed
+          </li>
+          <li>
+            Will have a respective post made on instagram, linkedin and facebook
+          </li>
+          <li>
+            Will be featured first on our partners page on our website with our
+            biggest banner
+          </li>
+          <li>
+            Special Thanks at the beginning of the event as well as a special
+            thanks at the end of the event as well as their logo featured again
+            on the slideshow and featured in our digital event program that is
+            larger than all other partners and that is placed at the very top of
+            the page.
+          </li>
+          <li>5 complimentary VIP seats</li>
+          <li>
+            Certificate of Appreciation: A certificate recognizing their support
+            for the youth in the Kitchener Waterloo community and being a
+            substantial supporter of TEDx Kiwanis Park Youth.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="form-container">
+  <h2>Sponsor Us</h2>
+  <form action="{% url 'submit' %}" method="POST" autocomplete="off">
+    {% csrf_token %}
+    <div class="form-group">
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Full Name"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        id="organization"
+        name="organization"
+        placeholder="Organization"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="Email"
+        autocomplete="off"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        id="level"
+        name="level"
+        placeholder="Preferred Tier"
+        autocomplete="off"
+        required
+      />
+    </div>
+    <br /><br />
+    <div class="form-group">
+      <textarea
+        id="message"
+        placeholder="Optional Message"
+        name="message"
+        style="resize: none"
+      ></textarea>
+    </div>
+    <br />
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}

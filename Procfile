@@ -1,0 +1,1 @@
+web: gunicorn TedX.wsgi --log-file 
