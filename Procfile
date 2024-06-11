@@ -1,1 +1,1 @@
-web: gunicorn TedX.wsgi --log-file 
+web: gunicorn TedX.wsgi --bind 0.0.0.0:$PORT
