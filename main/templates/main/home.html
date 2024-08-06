@@ -2,30 +2,34 @@
 <style>
   .cover {
     padding: 200px;
+    padding-top: 250px;
+    padding-bottom: 250px;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: black;
   }
   .cover-text {
     font-family: Helvetica;
     color: white;
   }
   h1 {
-    font-weight: 1000;
-    font-size: 100px;
+    font-weight: 300;
+    font-size: 80px;
     text-align: center;
     font-family: Helvetica;
   }
   .rest-of-title {
-    font-size: 90px;
+    font-size: 70px;
     font-weight: 300;
   }
   h3 {
-    font-weight: 1000;
-    font-size: 40px;
+    font-weight: 500;
+    font-size: 85px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: 30px;
+    margin-top: 70px;
+    margin-bottom: 70px;
   }
   .button {
     padding: 15px;
@@ -133,13 +137,13 @@
 
   @media (max-width: 900px) {
     h1 {
-      font-size: 60px; /* Font size after the specified viewport width */
+      font-size: 50px; /* Font size after the specified viewport width */
     }
     .rest-of-title {
       font-size: 50px;
     }
     h3 {
-      font-size: 35px;
+      font-size: 55px;
     }
     .cover {
       padding: 100px;
@@ -165,16 +169,13 @@
     }
   }
 </style>
-<div
-  class="cover"
-  style="background-image: url('{% static 'main/cover.jpeg' %}')"
->
+<div class="cover">
   <div class="container-xl cover-text">
     <h1 class="text-sm-sm">
       <span class="tedx">TED<span style="vertical-align: super">x</span></span>
-      <span class="rest-of-title">Kiwanis Park <b>Youth</b></span>
+      <span class="rest-of-title">Kiwanis Park Youth</span>
     </h1>
-    <h3>Empower. Inspire. Challenge.</h3>
+    <h3>The Power of Curiosity</h3>
 
     <a href="{% url 'sponsor' %}" style="text-decoration: none"
       ><div class="button">
